@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../module1/">
       
-      
-        <link rel="next" href="../module2/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Basic WebApplication - DJANGO</title>
+        <title>Basic CURD Operations - DJANGO</title>
       
     
     
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-web-application" class="md-skip">
+        <a href="#basic-curd-operations" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basic WebApplication
+              Basic CURD Operations
             
           </span>
         </div>
@@ -210,6 +208,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../module1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic WebApplication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -226,7 +244,7 @@
           
   
   <span class="md-ellipsis">
-    Basic WebApplication
+    Basic CURD Operations
   </span>
   
 
@@ -237,7 +255,7 @@
         
   
   <span class="md-ellipsis">
-    Basic WebApplication
+    Basic CURD Operations
   </span>
   
 
@@ -268,9 +286,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#turn-on-autosave-in-your-vsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turn on Autosave in your VSC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define admin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#define-views" class="md-nav__link">
     <span class="md-ellipsis">
       Define Views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-templates-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Templates Folder
     </span>
   </a>
   
@@ -285,39 +339,10 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#run-the-development-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run the Development Server
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../module2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Basic CURD Operations
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -358,6 +383,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#turn-on-autosave-in-your-vsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turn on Autosave in your VSC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define admin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#define-views" class="md-nav__link">
     <span class="md-ellipsis">
       Define Views
@@ -367,18 +419,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-up-urls" class="md-nav__link">
+  <a href="#create-templates-folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Set Up URLs
+      Create Templates Folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-the-development-server" class="md-nav__link">
+  <a href="#set-up-urls" class="md-nav__link">
     <span class="md-ellipsis">
-      Run the Development Server
+      Set Up URLs
     </span>
   </a>
   
@@ -399,8 +451,9 @@
                   
 
 
-<h1 id="basic-web-application">Basic Web Application</h1>
+<h1 id="basic-curd-operations">Basic CURD Operations</h1>
 <h4 id="go-through-home-page-once-before-you-read-the-info-below">Go through Home page once, before you read the info below</h4>
+<h4 id="turn-on-autosave-in-your-vsc">Turn on Autosave in your VSC</h4>
 <p>This is will give you a basic idea about how we do a Django project.</p>
 <p>As we discussed, the first step is to create a virtual environment and install Django.</p>
 <pre><code>python -m venv myenv
@@ -408,8 +461,8 @@ myenv\Scripts\activate
 pip install django
 </code></pre>
 <p>Then, Create Project:</p>
-<pre><code>django-admin startproject myproject
-cd myproject
+<pre><code>django-admin startproject mypro
+cd mypro
 </code></pre>
 <p>Create a new app within your project:</p>
 <pre><code>python manage.py startapp myapp
@@ -418,20 +471,199 @@ cd myproject
 Edit 'myproject/settings.py' to add your new app to the 'INSTALLED_APPS' list</p>
 <pre><code>      INSTALLED_APPS = [
           ...
-          'myapp',
+          'newapp',
       ]
+</code></pre>
+<p>Edit 'myproject/settings.py' to add your new app to the 'TEMPLATES' list</p>
+<pre><code>      TEMPLATES = [
+          ...
+          'DIRS': [   BASE_DIR,'templates'],
+      ]
+</code></pre>
+<h4 id="define-models">Define Models</h4>
+<p>I want to create a models for homepage and contact page.
+Edit newapp/models.py:</p>
+<pre><code>from django.db import models
+
+class Member(models.Model):
+    firstname=models.CharField(max_length=100)
+    lastname=models.CharField(max_length=100)
+    country=models.CharField(max_length=100)
+</code></pre>
+<p>Save it, and do migrations</p>
+<p>Open Terminal:</p>
+<pre><code>python manage.py makemigrations
+
+python manage.py migrate
+</code></pre>
+<p>Here you can create superuser:</p>
+<pre><code>python manage.py createsuperuser
+</code></pre>
+<p>and enter the required credentials.</p>
+<h4 id="define-admin">Define admin</h4>
+<p>I want to create a views for homepage and contact page.
+Edit newapp/admin.py:</p>
+<pre><code>from django.contrib import admin
+from .models import Member
+
+class MemberAdmin(admin.ModelAdmin):
+    list_display="firstname","lastname","country"
+
+admin.site.register(Member,MemberAdmin)
 </code></pre>
 <h4 id="define-views">Define Views</h4>
 <p>I want to create a views for homepage and contact page.
-Edit myapp/views.py:</p>
-<pre><code>from django.http import HttpResponse
-from django.shortcuts import render
+Edit newapp/views.py:</p>
+<pre><code>    from django.shortcuts import redirect, render
+    from .models import Member
 
-def home(request):
-    return HttpResponse("Welcome to the homepage!")
+    def index(request):
+        mem=Member.objects.all()
+        return render(request,'index.html',{'mem':mem})
 
-def contact(request):
-    return HttpResponse("Contact us at SRIT")
+    def add(request):
+        return render(request,'add.html')
+
+    def addrec(request):
+        x=request.POST['first']
+        y=request.POST['last']
+        z=request.POST['country']
+        mem=Member(firstname=x,lastname=y,country=z)
+        mem.save()
+        return redirect("/")
+
+    def delete(request,id):
+        mem=Member.objects.get(id=id)
+        mem.delete()
+        return redirect("/")
+
+    def update(request,id):
+        mem=Member.objects.get(id=id)
+        return render(request,'update.html',{'mem':mem})
+
+    def uprec(request,id):
+        x=request.POST['first']
+        y=request.POST['last']
+        z=request.POST['country']
+        mem=Member.objects.get(id=id)
+        mem.firstname=x
+        mem.lastname=y
+        mem.country=z
+        mem.save()
+        return redirect("/")
+</code></pre>
+<h4 id="create-templates-folder">Create Templates Folder</h4>
+<p>In Base Directory,</p>
+<pre><code>mkdir templates
+</code></pre>
+<p>In that folder, create required html files. We need add,index and update html files now as per Views.</p>
+<p><strong>index.html</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+{% load static %}
+&lt;link rel="stylesheet" href="{% static 'style.css' %}"&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Members&lt;/h1&gt;
+        &lt;table id="customers" border="1"&gt;
+            &lt;thead&gt;
+                &lt;th&gt;Id&lt;/th&gt;
+                &lt;th&gt;First Name&lt;/th&gt;
+                &lt;th&gt;Last Name&lt;/th&gt;
+                &lt;th&gt;Country&lt;/th&gt;
+                &lt;th colspan="2" id="mid"&gt;Action&lt;/th&gt;
+            &lt;/thead&gt;
+            {% for x in mem %}
+            &lt;tr&gt;
+                &lt;td&gt;{{x.id}}&lt;/td&gt;
+                &lt;td&gt;{{x.firstname}}&lt;/td&gt;
+                &lt;td&gt;{{x.lastname}}&lt;/td&gt;
+                &lt;td&gt;{{x.country}}&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;a href="update/{{x.id}}"&gt;&lt;button id="up"&gt;update&lt;/button&gt;&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;a href="delete/{{x.id}}"&gt;&lt;button id="del"&gt;delete&lt;/button&gt;&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            {% endfor %}
+        &lt;/table&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;a href="{% url 'add' %}"&gt;&lt;button id="new3"&gt;Add Member&lt;/button&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>add.html</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+{% load static %}
+&lt;link rel="stylesheet" href="{% static 'style.css' %}"&gt;
+
+&lt;body&gt;
+    &lt;div class="container1"&gt;
+        &lt;h1&gt;Add Member&lt;/h1&gt;
+        &lt;form action="{% url 'addrec' %}" method="post"&gt;
+            {% csrf_token %}
+            &lt;label for=""&gt;First Name&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+            &lt;input type="text" name="first"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for=""&gt;Last Name&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+            &lt;input type="text" name="last"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for=""&gt;Country&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+            &lt;input type="text" name="country"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;button type="submit" id="new"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p><strong>update.html</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+{% load static %}
+&lt;link rel="stylesheet" href="{% static 'style.css' %}"&gt;
+
+&lt;body&gt;
+    &lt;div class="container2"&gt;
+        &lt;h1&gt;Update Member&lt;/h1&gt;
+        &lt;form action="{% url 'uprec' mem.id %}" method="post"&gt;
+            {% csrf_token %}
+            &lt;label for=""&gt;First name&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+            &lt;input type="text" name="first" value="{{mem.firstname}}"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for=""&gt;Last name&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+            &lt;input type="text" name="last" value="{{mem.lastname}}"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for=""&gt;Country&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+            &lt;input type="text" name="country" value="{{mem.country}}"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;button type="submit" id="new1"&gt;Update&lt;/button&gt;
+        &lt;/form&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
 </code></pre>
 <h4 id="set-up-urls">Set Up URLs</h4>
 <p>Create a urls.py file in the myapp directory (if it doesn't already exist) and define the URL patterns:</p>
@@ -439,24 +671,22 @@ def contact(request):
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('contact/', views.contact, name='contact'),
+    path('',views.index,name="index"),
+    path('add/',views.add,name="add"),
+    path("addrec/",views.addrec,name="addrec"),
+    path('delete/&lt;int:id&gt;/',views.delete,name="delete"),
+    path('update/&lt;int:id&gt;/',views.update,name="update"),
+    path('update/uprec/&lt;int:id&gt;/',views.uprec,name="uprec")
 ]
 </code></pre>
-<p>Edit <strong>myproject/urls.py</strong> to include your app’s URLs:</p>
+<p>Edit <strong>mypro/urls.py</strong> to include your app’s URLs:</p>
 <pre><code>from django.contrib import admin
-from django.urls import path, include
+from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapp.urls')),
+    path("",include('newapp.urls'))
 ]
-</code></pre>
-<h4 id="run-the-development-server">Run the Development Server</h4>
-<pre><code>python manage.py runserver
-</code></pre>
-<p>Open your web browser and navigate to http://127.0.0.1:8000/ to see the homepage, and http://127.0.0.1:8000/contact/ to see the contact page.</p>
-<pre><code>              REVISIT HOMEPAGE IF YOU GOT STUCK, HAPPY LEARNING!!
 </code></pre>
 
 
